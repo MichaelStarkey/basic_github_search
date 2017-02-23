@@ -6,7 +6,7 @@ RSpec.describe BasicGithubSearch do
   end
 
   it "should return a list of urls" do
-    test_urls = BasicGithubSearch.gitSearch("tetris")
-    test_urls.should_not be_nil
+    result = BasicGithubSearch.gitSearch("tetris")
+    result.length > 0
   end
 end

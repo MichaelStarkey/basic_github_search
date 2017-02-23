@@ -1,9 +1,10 @@
 require "basic_github_search/version"
-require "HTTParty"
+require "basic_github_search/basic_github_search_api"
 
 module BasicGithubSearch
   def self.gitSearch(keyword)
-    searchResults = BasicGithubSearchApi.new(keyword).search.urls
-    puts searchResults
+    result = BasicGithubSearchApi.new(keyword).search
+    puts result.inspect
+    result
   end
 end
