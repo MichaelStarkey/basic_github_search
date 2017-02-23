@@ -5,7 +5,8 @@ RSpec.describe BasicGithubSearch do
     expect(BasicGithubSearch::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "should return a list of urls" do
+    test_urls = BasicGithubSearch.gitSearch("tetris")
+    test_urls.should_not be_nil
   end
 end
